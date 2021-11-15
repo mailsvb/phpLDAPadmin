@@ -320,8 +320,7 @@ class QueryRender extends PageRender {
 				case 'table':
 					if (! $results) {
 						echo _('Search returned no results');
-
-						continue;
+						continue 2;
 					}
 
 					printf('<form action="cmd.php" method="post" id="massform_%s">',$counter);
