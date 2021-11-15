@@ -320,10 +320,9 @@ class page {
 		if (defined('DEBUG_ENABLED') && DEBUG_ENABLED && (($fargs=func_get_args())||$fargs='NOARGS'))
 			debug_log('Entered (%%)',129,0,__FILE__,__LINE__,__METHOD__,$fargs);
 
-		printf('<tr class="foot"><td><small>%s</small></td><td colspan="2"><div id="ajFOOT">%s</div>%s</td></tr>',
+		printf('<tr class="foot"><td><small>%s</small></td><td colspan="2"><div id="ajFOOT">%s</div></td></tr>',
 			isCompress() ? '[C]' : '&nbsp;',
-			app_version(),
-			get_href('logo') ? sprintf('<a href="%s"><img src="%s" alt="SourceForge.net Logo" style="border: 0px;" /></a>',get_href('sf'),get_href('logo')) : '&nbsp;');
+			app_version());
 	}
 
 	/**
