@@ -372,30 +372,6 @@ function cmd_control_pane($type) {
 
     case 'top' :
       return array(
-        'forum'=>array(
-          'title'=>_('Forum'),
-          'enable'=>isset($_SESSION[APPCONFIG]) ? $_SESSION[APPCONFIG]->isCommandAvailable('cmd','oslinks') : true,
-          'link'=>sprintf('href="%s" title="%s" onclick="target=\'_blank\';"',get_href('forum'),_('Forum')),
-          'image'=>sprintf('<img src="%s/forum-big.png" alt="%s" />',IMGDIR,_('Forum'))),
-
-        'feature'=>array(
-          'title'=>_('Request feature'),
-          'enable'=>isset($_SESSION[APPCONFIG]) ? $_SESSION[APPCONFIG]->isCommandAvailable('cmd','oslinks') : true,
-          'link'=>sprintf('href="%s" title="%s" onclick="target=\'_blank\';"',get_href('add_rfe'),_('Request feature')),
-          'image'=>sprintf('<img src="%s/request-feature-big.png" alt="%s" />',IMGDIR,_('Request feature'))),
-
-        'bug'=>array(
-          'title'=>_('Report a bug'),
-          'enable'=>isset($_SESSION[APPCONFIG]) ? $_SESSION[APPCONFIG]->isCommandAvailable('cmd','oslinks') : true,
-          'link'=>sprintf('href="%s" title="%s" onclick="target=\'_blank\';"',get_href('add_bug'),_('Report a bug')),
-          'image'=>sprintf('<img src="%s/bug-big.png" alt="%s" />',IMGDIR,_('Report a bug'))),
-
-        'donation'=>array(
-          'title'=>_('Donate'),
-          'enable'=>isset($_SESSION[APPCONFIG]) ? $_SESSION[APPCONFIG]->isCommandAvailable('cmd','oslinks') : true,
-          'link'=>sprintf('href="%s" title="%s" onclick="target=\'_blank\';"',get_href('donate'),_('Donate')),
-          'image'=>sprintf('<img src="%s/smile-big.png" alt="%s" />',IMGDIR,_('Donate'))),
-
         'help'=>array(
           'title'=>_('Help'),
           'enable'=>isset($_SESSION[APPCONFIG]) ? $_SESSION[APPCONFIG]->isCommandAvailable('cmd','oslinks') : true,
